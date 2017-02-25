@@ -14,6 +14,7 @@ public class CarparkDAO {
     public CarparkDAO() {
         conn = DBHelper.initConn();
     }
+
     public int insertCarpark(Carpark c){
         String query = " insert into carpark (carpark_id, lots,lastUpdated)"
                 + " values (?, ?, ?)";

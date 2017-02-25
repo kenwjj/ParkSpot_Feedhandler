@@ -13,5 +13,55 @@
     <schema id="7" parent="1" name="parkspot">
       <Visible>1</Visible>
     </schema>
+    <table id="8" parent="7" name="carpark"/>
+    <table id="9" parent="7" name="carpark_master"/>
+    <column id="10" parent="8" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="11" parent="8" name="carpark_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="12" parent="8" name="lots">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="13" parent="8" name="lastUpdated">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="14" parent="8" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="15" parent="9" name="carpark_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="16" parent="9" name="area">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="17" parent="9" name="development">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="18" parent="9" name="latitude">
+      <Position>4</Position>
+      <DataType>float(10,6)|0</DataType>
+    </column>
+    <column id="19" parent="9" name="longtitude">
+      <Position>5</Position>
+      <DataType>float(10,6)|0</DataType>
+    </column>
+    <key id="20" parent="9" name="PRIMARY">
+      <ColNames>carpark_id</ColNames>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>
