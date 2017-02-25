@@ -1,4 +1,4 @@
-package com.app.ParkSpot;
+package com.app.main;
 
 import com.app.controller.CarparkController;
 

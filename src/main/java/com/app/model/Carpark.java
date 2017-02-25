@@ -14,8 +14,8 @@ public class Carpark {
     private int CarParkID;
     private String Area;
     private String Development;
-    private double Latitude;
-    private double Longitude;
+    private float Latitude;
+    private float Longitude;
     private int Lots;
     private Timestamp lastUpdated =  new Timestamp(new Date().getTime());
 
@@ -24,8 +24,8 @@ public class Carpark {
 
     @JsonCreator
     public Carpark(@JsonProperty("CarParkID")int carParkID, @JsonProperty("Area")String area,
-                   @JsonProperty("Development")String development, @JsonProperty("Latitude")double latitude,
-                   @JsonProperty("Longitude")double longitude, @JsonProperty("Lots")int lots) {
+                   @JsonProperty("Development")String development, @JsonProperty("Latitude")float latitude,
+                   @JsonProperty("Longitude")float longitude, @JsonProperty("Lots")int lots) {
         CarParkID = carParkID;
         Area = area;
         Development = development;
@@ -58,19 +58,19 @@ public class Carpark {
         Development = development;
     }
 
-    public double getLatitude() {
+    public float getLatitude() {
         return Latitude;
     }
 
-    public void setLatitude(double latitude) {
+    public void setLatitude(float latitude) {
         Latitude = latitude;
     }
 
-    public double getLongitude() {
+    public float getLongitude() {
         return Longitude;
     }
 
-    public void setLongitude(double longitude) {
+    public void setLongitude(float longitude) {
         Longitude = longitude;
     }
 

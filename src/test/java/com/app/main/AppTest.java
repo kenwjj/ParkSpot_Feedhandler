@@ -1,4 +1,4 @@
-package com.app.ParkSpot;
+package com.app.main;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
