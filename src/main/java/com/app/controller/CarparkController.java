@@ -15,8 +15,6 @@ import java.sql.Connection;
 import java.sql.Timestamp;
 import java.util.Date;
 
-
-
 /**
  * Created by Kenwjj on 23/2/2017.
  */
@@ -26,6 +24,7 @@ public class CarparkController {
     public CarparkController() {
     }
 
+    // Start publishing Carpark Availability Info
     public void publish(){
         Carpark[] carparks = getCarparks();
         Timestamp now = new Timestamp(new Date().getTime());
@@ -37,10 +36,9 @@ public class CarparkController {
             cpDAO.insertCarpark(c);
         }
         cpDAO.closeDB();
-
-
     }
 
+    // Retrieve Carpark Availability Info from API
     public Carpark[] getCarparks(){
         JSONArray jsonList = RESTHelper.retrieveFromCarparksAPI();
         ObjectMapper mapper = new ObjectMapper();
@@ -54,6 +52,5 @@ public class CarparkController {
         }
         return carparks;
     }
-
 
 }

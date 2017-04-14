@@ -8,6 +8,7 @@ import java.util.Date;
 
 /**
  * Created by Kenwjj on 23/2/2017.
+ * Carpark Model Object
  */
 public class Carpark {
 
